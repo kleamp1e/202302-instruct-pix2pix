@@ -12,3 +12,4 @@ services:
     volumes:
       - { type: "bind", source: ".", target: "/mnt/workspace" }
       - { type: "bind", source: "./cache", target: "/root/.cache" }
+    working_dir: "/mnt/workspace"

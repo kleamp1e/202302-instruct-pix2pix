@@ -7,3 +7,7 @@ cd 202302-instruct-pix2pix
 docker-compose build
 docker-compose run --rm shell
 ```
+
+```sh
+python3 example.py
+```
