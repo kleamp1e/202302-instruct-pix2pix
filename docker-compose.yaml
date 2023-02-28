@@ -1,0 +1,14 @@
+version: "3"
+services:
+  shell:
+    build: "."
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+              count: 1
+    volumes:
+      - { type: "bind", source: ".", target: "/mnt/workspace" }
+      - { type: "bind", source: "./cache", target: "/root/.cache" }
